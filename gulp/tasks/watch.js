@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
-watch = require('gulp-watch'),
-browserSync = require('browser-sync').create();
+    watch = require('gulp-watch'),
+    browserSync = require('browser-sync').create();
 
 gulp.task('watch', () => {
 
@@ -15,7 +15,7 @@ gulp.task('watch', () => {
     });
 
     watch('./app/assets/styles/**/*.css', function() {
-        gulp.start('cssInject')
+        gulp.start('cssInject');
     })
 });
 
