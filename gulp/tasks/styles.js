@@ -7,7 +7,12 @@ var gulp = require('gulp'),
     mixins = require('postcss-mixins');
 
 gulp.task('styles', () => {
+
     return gulp.src('./app/assets/styles/styles.css')
         .pipe(postcss([cssimport, mixins, cssvars, nested, autoprefixer]))
+        .on('error', function(errorInfo) {
+            this.emit('end');
+            console.log(errorInfo.toString());
+        })
         .pipe(gulp.dest('./app/temp/styles'));
 });
