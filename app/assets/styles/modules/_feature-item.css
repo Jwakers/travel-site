@@ -21,6 +21,7 @@
         font-weight: 300;
         margin-bottom: .8rem;
         text-align: center;
+        
         @mixin atSmall {
             text-align: left;
             font-size: 1.875rem;
