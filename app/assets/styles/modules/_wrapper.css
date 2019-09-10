@@ -20,7 +20,7 @@
     &--no-padding-until-medium {
         padding-left:0px;
         padding-right: 0px;
-        @mixin atMedium { 
+        @mixin atMedium {
             padding-left:20px;
             padding-right: 18px;
         }
