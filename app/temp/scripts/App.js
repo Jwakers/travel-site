@@ -10676,11 +10676,14 @@ return jQuery;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__ = __webpack_require__(3);
+throw new Error("Cannot find module \"./modules/StickyHeader\"");
+
 
 
 var mobileMenu = new __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__["a" /* default */]();
 new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */]('.feature-item', "85%", true);
 new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */]('.testimonial');
+new __WEBPACK_IMPORTED_MODULE_2__modules_StickyHeader___default.a();
 
 /***/ }),
 /* 2 */

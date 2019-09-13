@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints.js'
+import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints.js';
 
 export default class revealOnScoll {
     constructor(selector, offset = "85%") {
