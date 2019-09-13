@@ -11440,6 +11440,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_StickyHeader__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_Modal__ = __webpack_require__(7);
+
 
 
 
@@ -11447,6 +11449,7 @@ var mobileMenu = new __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__["a" /* de
 new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */]('.feature-item', "85%", true);
 new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */]('.testimonial');
 new __WEBPACK_IMPORTED_MODULE_2__modules_StickyHeader__["a" /* default */]();
+new __WEBPACK_IMPORTED_MODULE_3__modules_Modal__["a" /* default */]();
 
 /***/ }),
 /* 3 */
@@ -12006,6 +12009,64 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   $.fn.smoothScroll.defaults = defaults;
 
 }));
+
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Modal; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var Modal =
+/*#__PURE__*/
+function () {
+  function Modal() {
+    _classCallCheck(this, Modal);
+
+    this.openModalButtons = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.open-modal-js');
+    this.modal = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.modal');
+    this.closeModalButton = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.modal__close');
+    this.events();
+  }
+
+  _createClass(Modal, [{
+    key: "events",
+    value: function events() {
+      this.openModalButtons.click(this.openModal.bind(this));
+      this.closeModalButton.click(this.closeModal.bind(this));
+    }
+  }, {
+    key: "openModal",
+    value: function openModal() {
+      var _this = this;
+
+      this.modal.addClass('modal--open');
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).on('keyup', function (event) {
+        if (event.key === "Escape") {
+          _this.closeModal();
+        }
+      });
+    }
+  }, {
+    key: "closeModal",
+    value: function closeModal() {
+      this.modal.removeClass('modal--open');
+    }
+  }]);
+
+  return Modal;
+}();
 
 
 
